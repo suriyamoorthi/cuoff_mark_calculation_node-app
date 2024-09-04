@@ -1,12 +1,12 @@
 require("dotenv").config();
 
-const cors = require ("cors");
+const cors = require ('cors');
 const express = require("express");
 
 
  const mongo = require("./Shared/mongo");
  const routes = require("./Routes/Post_route");
-
+ 
 
 // const {logging , maintance}=routes 
 
@@ -47,7 +47,7 @@ const PORT= process.env.PORT || 3001;
         // app.use("/Adminappionment", routes.adminappionmentRoutes);
         // app.use("/appionment", routes.appionmentRoutes);
         // app.use("/profile", routes.profileRoutes);
-        // console.log("Routes initialzation");
+         console.log("Routes initialzation");
 
 
         //port
