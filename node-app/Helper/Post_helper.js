@@ -22,5 +22,14 @@ const PostHelper = {
   create(post) {
     return db.Users.insertOne(post);
   },
+  getAllUsers() {
+    return db.Users.find().toArray();
+  },
+
+  update(user) {
+    return db.Users.updateOne({ _id: user._id }, { $set: user });
+  },
+
 };
+
 module.exports = PostHelper;

@@ -5,6 +5,7 @@ const express = require("express");
 
 const mongo = require("./Shared/mongo");
 const routes = require("./Routes/Post_route");
+const getRoutes =require("./Routes/Get_routes")
 
 const app = express();
 
@@ -27,7 +28,8 @@ const PORT = process.env.PORT || 3001;
     // });
     console.log("Midlleware initalized");
     //routes
-    app.use("/Users", routes);
+    app.use("/Users", routes)
+    app.use("/Users",getRoutes)
     console.log("Routes initialzation");
 
     //port
